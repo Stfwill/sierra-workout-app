@@ -1,7 +1,7 @@
 {
   "name": "Sweat & Stats",
   "short_name": "S&S",
-  "description": "A fast, structured workout tracker where every rep counts.",
+  "description": "Build, suggest, paste, repeat, and track every workout.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
