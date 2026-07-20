@@ -1,11 +1,16 @@
-# Sweat & Stats v2.2.2
+# Sweat & Stats v2.3
 
-Equipment Type growth patch.
+Update #5 foundation release.
 
-## Changes
-- Selecting **Other** now opens a **New Equipment Type** field.
-- The new type is saved as the exercise's actual Equipment Type rather than leaving it categorized as Other.
-- New Equipment Types can be saved for reuse across Quick Add, Edit Exercise, Exercise Import, and Library filters.
-- Equipment Name remains a separate field.
-- Existing type names are matched case-insensitively to reduce duplicates.
-- Custom equipment types and names remain stored locally with the rest of the app data.
+## Included
+- Permanent Workout History tab
+- Reopen, copy, edit notes, and delete workouts
+- Exercise-level history from the Library
+- Last performed, times performed, and best weight
+- Revised muscle hierarchy including Legs > Calves
+- Smarter exercise import that can retain new muscle values
+- Improved finish summary
+- Local profile settings and Firebase-ready setup files
+
+## Important
+Workout history works immediately in the browser. Firebase cloud login and syncing require connecting your own Firebase project using `FIREBASE_SETUP.md`.
