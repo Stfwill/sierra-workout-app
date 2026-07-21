@@ -1,14 +1,19 @@
-# Sweat & Stats Firebase Setup
+# Sweat & Stats v2.3.1 Firebase Setup
 
-Version 2.3 includes permanent local Workout History, exercise history, profile settings, and a cloud-ready data model. Firebase login is not activated until a Firebase project is connected.
+The Firebase project configuration is already connected in `index.html`.
 
-1. Create a Firebase project.
-2. Add a Web App in Project Settings.
-3. Enable Authentication > Email/Password.
-4. Create a Firestore database.
-5. Copy `firebase-config.example.js` to `firebase-config.js` and paste your project values.
-6. Apply user-scoped Firestore rules before storing private data.
+## Before testing login
 
-Do not publish service-account keys. The normal Firebase web configuration is designed to be used in a browser, while Firestore Security Rules protect the records.
+1. In Firebase Console, open **Authentication → Settings → Authorized domains**.
+2. Add your GitHub Pages domain, usually `YOUR-GITHUB-USERNAME.github.io`. Do not include `https://` or a path.
+3. Open **Firestore Database → Rules → Edit rules**.
+4. Replace the existing rules with the contents of `firestore.rules`.
+5. Tap **Publish**.
 
-The next connection step will add Firebase SDK loading, account creation/sign-in, migration of local records, and per-user syncing.
+## First sign-in
+
+Open the updated app and tap **Create Account**. The first time you sign in, the app checks for existing local Sweat & Stats data and asks whether to move it into your private cloud account.
+
+## Data model
+
+Personal app state is stored at `users/{uid}/app/state`. Firestore rules restrict access to the signed-in owner of that UID.

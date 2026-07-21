@@ -1,16 +1,7 @@
-# Sweat & Stats v2.3
+# Sweat & Stats v2.3.1
 
-Update #5 foundation release.
+Update #5 Firebase integration patch.
 
-## Included
-- Permanent Workout History tab
-- Reopen, copy, edit notes, and delete workouts
-- Exercise-level history from the Library
-- Last performed, times performed, and best weight
-- Revised muscle hierarchy including Legs > Calves
-- Smarter exercise import that can retain new muscle values
-- Improved finish summary
-- Local profile settings and Firebase-ready setup files
+Includes Firebase connection, email/password account creation and sign-in, password reset, persistent login, private cloud sync, local-data migration, account sign-out, manual sync, workout History foundation, exercise History, and the Plantar Flexion movement pattern.
 
-## Important
-Workout history works immediately in the browser. Firebase cloud login and syncing require connecting your own Firebase project using `FIREBASE_SETUP.md`.
+Read `FIREBASE_SETUP.md` before testing account creation.
