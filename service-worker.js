@@ -1,4 +1,4 @@
-const CACHE="sweat-and-stats-v2-4-0";
+const CACHE="sweat-and-stats-v2-4-0-1";
 const ASSETS=["./","./index.html","./manifest.json","./cova-flex.png","./cova-point.png","./cova-wave.png"];
 self.addEventListener("install",event=>{self.skipWaiting();event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)))});
 self.addEventListener("activate",event=>{event.waitUntil(Promise.all([self.clients.claim(),caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key))))]))});

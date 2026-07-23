@@ -1,7 +1,7 @@
 {
   "name": "Sweat & Stats",
   "short_name": "S&S",
-  "description": "A structured workout tracker that educates as it tracks.",
+  "description": "Sweat & Stats v2.4.0.1 incremental restoration patch",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

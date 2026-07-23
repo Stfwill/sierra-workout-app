@@ -1,0 +1,6 @@
+Sweat & Stats v2.4.0.1
+
+Incremental patch applied to v2.4.0. Existing localStorage keys and data are preserved.
+
+Restored: Paste Workout, Saved/Favorite selection, Random Workout, Paste Exercise(s), detailed reusable History actions.
+Corrected: Dashboard Last Workout and Today's Workout cards, completed-workout streak, all five Quick Actions, removed notification, points, placeholder Learn More actions, and duplicate Start Workout drawer entry.
