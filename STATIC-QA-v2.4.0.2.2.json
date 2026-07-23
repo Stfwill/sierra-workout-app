@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "unique_html_ids": true,
+    "local_assets_present": true,
+    "version_in_title": true,
+    "completion_cardio_floors": true,
+    "timer_resume": true,
+    "all_route_preload": true,
+    "random_duration_difficulty_count": true,
+    "paste_missing_exercise_review": true,
+    "paste_exercise_rename": true,
+    "exercise_insights": true,
+    "dashboard_order": true,
+    "compact_metrics": true,
+    "cloud_upload_download_conflict": true,
+    "offline_queue": true,
+    "backup_restore": true,
+    "schema_migration": true
+  },
+  "duplicates": [],
+  "missing_assets": [],
+  "passed": 16,
+  "total": 16
+}

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#5b21b6">
 <link rel="manifest" href="manifest.json">
-<title>Sweat & Stats v2.4.0.2.1</title>
+<title>Sweat & Stats v2.4.0.2.2</title>
 <style>
 :root{
  --bg:#f7f5ff;--surface:#fff;--surface2:#f3efff;--ink:#151326;--muted:#6b6880;
@@ -47,7 +47,7 @@ dialog{border:0;border-radius:18px;background:var(--surface);color:var(--ink);wi
 .build-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.build-grid .btn:last-child{grid-column:1/-1}.history-details{margin-top:12px;border-top:1px solid var(--border);padding-top:10px}.history-ex{padding:10px 0;border-bottom:1px solid var(--border)}.history-ex:last-child{border-bottom:0}.history-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.summary-line{white-space:pre-wrap;font-family:inherit}.dashboard-strip{display:flex;justify-content:space-between;align-items:center;gap:12px}.dashboard-strip .meta{color:var(--muted);font-size:.85rem}.today-dark{background:#17132b;color:#fff}.today-dark .muted{color:#b8b3c8}.history-stat{background:var(--surface);border:1px solid var(--border);border-radius:15px;padding:12px;text-align:center}.history-stat b{display:block;font-size:1.35rem}
 @media(max-width:700px){.quick{grid-template-columns:repeat(5,minmax(0,1fr));gap:5px}.quick button{padding:10px 2px;min-height:82px;font-size:.67rem}.quick .qicon{font-size:1.2rem}.build-grid{grid-template-columns:1fr 1fr}.history-actions .btn{flex:1 1 45%}}
 
-/* v2.4.0.2.1 functional restoration */
+/* v2.4.0.2.2 functional restoration */
 .metrics{gap:8px}.metric{padding:10px 11px}.metric .big{font-size:1.55rem;margin:4px 0}.metric .spark{display:none}
 .exercise-complete{background:#ecfdf3!important;border:2px solid #16a34a!important;box-shadow:0 8px 24px rgba(22,163,74,.14)!important}.exercise-complete .exercise-name{color:#166534}.done-badge{display:inline-flex;align-items:center;gap:5px;background:#16a34a;color:#fff;border-radius:999px;padding:4px 8px;font-size:.72rem;font-weight:900;margin-left:7px}
 .last-performance{background:var(--surface2);border-left:4px solid var(--purple);padding:10px;border-radius:10px;margin:10px 0}.current-summary{font-weight:850;margin:10px 0;color:var(--purple)}
@@ -57,6 +57,7 @@ dialog{border:0;border-radius:18px;background:var(--surface);color:var(--ink);wi
 
 </style>
 <link rel="stylesheet" href="patch-2.4.0.2.1.css">
+<link rel="stylesheet" href="patch-2.4.0.2.2.css">
 </head>
 <body>
 <header class="appbar">
@@ -97,7 +98,7 @@ dialog{border:0;border-radius:18px;background:var(--surface);color:var(--ink);wi
  <div class="help-card"><img src="cova-wave.png" alt="Cova waving"><div class="help-copy"><b class="accent">Need help?</b><p class="small">Cova is here to guide you every step.</p></div></div>
  <div class="footer-tools">
    <div class="toggle-row"><span>☾ Dark Mode</span><button class="switch" id="darkToggle" aria-label="Toggle dark mode"></button></div>
-   <div class="toggle-row"><span>ⓘ Version</span><b>v2.4.0.2.1</b></div>
+   <div class="toggle-row"><span>ⓘ Version</span><b>v2.4.0.2.2</b></div>
    <button class="drawer-link" id="signOut"><span class="ico">↪</span>Sign Out</button>
  </div>
 </aside>
@@ -146,7 +147,7 @@ dialog{border:0;border-radius:18px;background:var(--surface);color:var(--ink);wi
 <section id="library" class="page"><div class="section-title">Exercise Library</div><div class="toolbar"><div class="field search"><label>Search</label><input id="librarySearch" placeholder="Exercise, muscle, equipment"></div><div class="field"><label>Primary Group</label><select id="groupFilter"></select></div><div class="field"><label>Sort</label><select id="librarySort"><option value="name">Name</option><option value="group">Primary Group</option><option value="equipment">Equipment Type</option></select></div></div><div class="actions" style="margin-top:9px"><button id="quickAddBtn" class="btn primary">+ Quick Add</button><button id="importExercisesBtn" class="btn secondary">Paste Exercise(s)</button><button id="resetLibraryBtn" class="btn ghost">Restore Approved Library</button></div><div id="libraryList" style="margin-top:10px"></div></section>
 <section id="history" class="page"><div class="section-title">History</div><div id="historyInsights" class="metrics"></div><div id="historyList"></div></section>
 <section id="profile" class="page"><div class="section-title">Profile</div><div class="card"><div class="grid2"><div class="field"><label>Name</label><input id="profileName" value="Sierra"></div><div class="field"><label>Height</label><input id="profileHeight" value="5 ft 4 in"></div><div class="field"><label>Weight</label><input id="profileWeight" value="192"></div><div class="field"><label>Goal Weight</label><input id="profileGoal" value="170"></div></div><p><b>BMI:</b> 33.0</p><button class="btn primary" id="saveProfile">Save Profile</button></div></section>
-<section id="settings" class="page"><div class="section-title">Settings</div><div class="card"><div class="toggle-row"><span>Dark Mode</span><button class="switch" id="settingsDark"></button></div><div class="toggle-row"><span>App Version</span><b>v2.4.0.2.1</b></div></div></section>
+<section id="settings" class="page"><div class="section-title">Settings</div><div class="card"><div class="toggle-row"><span>Dark Mode</span><button class="switch" id="settingsDark"></button></div><div class="toggle-row"><span>App Version</span><b>v2.4.0.2.2</b></div></div></section>
 <section id="equipment" class="page"><div class="section-title">Equipment</div><div class="card placeholder"><h2>Equipment guides are coming in v2.5.</h2><p class="muted">The navigation entry is active now so the app shell is connected.</p></div></section>
 <section id="attachments" class="page"><div class="section-title">Attachments</div><div class="card placeholder"><h2>Attachment guides are coming in v2.5.</h2></div></section>
 <section id="muscles" class="page"><div class="section-title">Muscle Groups</div><div class="card placeholder"><h2>Muscle education is coming in v2.5.</h2></div></section>
@@ -316,4 +317,5 @@ const oldShowPage=showPage;showPage=function(id){oldShowPage(id);if(id==="dashbo
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
 <script src="patch-2.4.0.2.1.js"></script>
+<script src="patch-2.4.0.2.2.js"></script>
 </body></html>
