@@ -1,8 +1,0 @@
-Sweat & Stats v2.4.0.2.1 Correction Patch
-
-Functional baseline: v2.3.1
-Visual/navigation baseline: v2.4.0.2
-
-This correction patch restores the approved workout-completion flow, completed-card state, previous-performance and current summaries, workout-start routes, balanced workout generation, structured imports, custom reusable values, exercise library actions and insights, detailed history, post-save behavior, dashboard order, data migration, and Firebase authentication/cloud synchronization.
-
-Existing sw2_ local data is backed up before schema migration and preserved. Exact workout start/end timestamps remain deferred to v2.4.0.3.
